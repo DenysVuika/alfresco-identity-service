@@ -1,0 +1,20 @@
+{
+  "name": "alfresco-identity-service",
+  "version": "1.0.0",
+  "description": "Docker container for Identify Service",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t alfresco/identity-service .",
+    "start": "docker run -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin --name=auth alfresco/identity-service"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenysVuika/alfresco-identity-service.git"
+  },
+  "author": "Denys Vuika <denys.vuika@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/DenysVuika/alfresco-identity-service/issues"
+  },
+  "homepage": "https://github.com/DenysVuika/alfresco-identity-service#readme"
+}
