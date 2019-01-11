@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  auth:
+    image: alfresco/identity-service:latest
+    build: .
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/tmp/alfresco-realm.json
+    ports:
+      - 8081:8080
+    # Custom realm configuration mapping
+    # volumes:
+    #   ./alfresco-realm.json:/tmp/alfresco-realm.json
