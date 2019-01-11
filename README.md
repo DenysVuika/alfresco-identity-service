@@ -12,7 +12,8 @@ Contents:
 - **[alfresco keycloak theme](https://github.com/Alfresco/alfresco-keycloak-theme)**
 - **alfresco-realm.json**
 
-The realm file is already included into the image, but you can customise.
+The realm file is already included into the image, but you can customise it
+by providing external configuration file.
 
 ![](docs/login.png)
 
