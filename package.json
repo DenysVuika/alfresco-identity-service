@@ -6,7 +6,8 @@
   "scripts": {
     "build": "docker build -t alfresco/identity-service .",
     "start": "docker run --rm -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/tmp/alfresco-realm.json alfresco/identity-service",
-    "start:realm": "docker run --rm -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/tmp/alfresco-realm.json -v $(pwd)/alfresco-realm.json:/tmp/alfresco-realm.json alfresco/identity-service"
+    "start:realm": "docker run --rm -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/tmp/alfresco-realm.json -v $(pwd)/alfresco-realm.json:/tmp/alfresco-realm.json alfresco/identity-service",
+    "publish": "docker build -t denysvuika/alfresco-identity-service . && docker push denysvuika/alfresco-identity-service:latest"
   },
   "repository": {
     "type": "git",
