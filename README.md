@@ -50,3 +50,17 @@ docker run --rm -p 8081:8080 && \
     -e KEYCLOAK_IMPORT=/tmp/alfresco-realm.json && \
     alfresco/identity-service
 ```
+
+## Integrating with existing docker-compose
+
+```yml
+auth:
+    image: denysvuika/alfresco-identity-service:latest
+    environment:
+        - KEYCLOAK_USER=admin
+        - KEYCLOAK_PASSWORD=admin
+        - KEYCLOAK_IMPORT=/tmp/alfresco-realm.json
+        - DB_VENDOR=h2
+    ports:
+        - 8081:8080
+```
